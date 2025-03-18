@@ -36,14 +36,16 @@ const ListDepartmentComponent = () => {
 
     return (
         <div className='container'>
-            <h2 className='text-center'>List of Departments</h2>
-            <Link to='/add-department' className='btn btn-primary mb-2'>Add Department</Link>
-            <table className='table table-striped table-bordered'>
+            <h2 className='text-center' style={{ margin: "20px" }}>List of Departments</h2>
+            <Link to='/add-department' className='btn btn-primary mb-2'
+            style={{ margin: "20px" }}>Add Department</Link>
+            <table className='table table-bordered table-hover'>
                 <thead>
                     <tr>
                         <th>Department Id</th>
                         <th>Department Name</th>
                         <th>Department Description</th>
+                        <th>Actions</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -54,9 +56,10 @@ const ListDepartmentComponent = () => {
                                 <td>{department.departmentName}</td>
                                 <td>{department.departmentDescription}</td>
                                 <td>
-                                    <button onClick={() => updateDepartment(department.id)} className='btn btn-info'>Update</button>
+                                    <button onClick={() => updateDepartment(department.id)} className='btn btn-info'
+                                        style={{ margin: "10px" }}>Update</button>
                                     <button onClick={() => removeDepartment(department.id)} className='btn btn-danger'
-                                        style={{ marginLeft: "10px" }}
+                                        style={{ margin: "10px" }}
                                     >Delete</button>
                                 </td>
                             </tr>

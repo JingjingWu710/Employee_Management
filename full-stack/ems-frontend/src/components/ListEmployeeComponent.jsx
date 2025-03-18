@@ -40,9 +40,10 @@ const ListEmployeeComponent = () => {
 
   return (
     <div className='container'>
-        <h2 className='text-center'>List of Employees</h2>
-        <button type="button" className="btn btn-primary" onClick={addNewEmployee}>Add Employee</button>
-        <table className='table table-striped table-bordered'>
+        <h2 className='text-center' style={{ margin: "20px" }}>List of Employees</h2>
+        <button type="button" className="btn btn-primary" onClick={addNewEmployee}
+        style={{ margin: "20px" }}>Add Employee</button>
+        <table className='table table-bordered table-hover'>
             <thead>
                 <tr>
                     <th>Employee Id</th>
@@ -61,9 +62,10 @@ const ListEmployeeComponent = () => {
                             <td>{employee.lastName}</td>
                             <td>{employee.email}</td>
                             <td>
-                                <button className='btn btn-info' onClick={() => updateEmployee(employee.id)}>Update</button>
+                                <button className='btn btn-info' onClick={() => updateEmployee(employee.id)}
+                                    style={{margin:"10px"}}>Update</button>
                                 <button className='btn btn-danger' onClick={() => removeEmployee(employee.id)}
-                                    style={{marginLeft:"10px"}}>Delete</button>
+                                    style={{margin:"10px"}}>Delete</button>
                             </td>
                         </tr>
                     )

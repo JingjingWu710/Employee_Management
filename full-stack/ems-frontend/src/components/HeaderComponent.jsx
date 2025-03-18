@@ -1,25 +1,19 @@
 import React from 'react'
+import { Navbar, Nav } from 'react-bootstrap'
 import { NavLink } from 'react-router-dom'
 
 const HeaderComponent = () => {
     return (
-        <div>
-            <header>
-                <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
-                    <a className="navbar-brand" href="#">Employee Management System</a>
-                    <div className="collapse navbar-collapse" id="navbarNav">
-                        <ul className="navbar-nav">
-                            <li className="nav-item">
-                                <NavLink className='nav-link' to='/employees'>Employees</NavLink>
-                            </li>
-                            <li className="nav-item">
-                                <NavLink className='nav-link' to='/departments'>Departments</NavLink>
-                            </li>
-                        </ul>
-                    </div>
-                </nav>
-            </header>
-        </div>
+        <Navbar expand="lg" style={{ backgroundColor: '#e3f2fd' }} variant="light">
+            <Navbar.Brand style={{ marginLeft: "10px" }} href="#">Employee Management System</Navbar.Brand>
+            <Navbar.Toggle aria-controls="basic-navbar-nav" />
+            <Navbar.Collapse id="basic-navbar-nav">
+                <Nav style={{ marginLeft: "10px" }} className="me-auto">
+                    <Nav.Link as={NavLink} to="/employees">Employees</Nav.Link>
+                    <Nav.Link as={NavLink} to="/departments">Departments</Nav.Link>
+                </Nav>
+            </Navbar.Collapse>
+        </Navbar>
     )
 }
 

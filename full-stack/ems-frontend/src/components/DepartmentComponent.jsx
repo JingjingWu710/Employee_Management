@@ -47,9 +47,9 @@ const DepartmentComponent = () => {
 
     function pageTitle(){
         if (id) {
-            return <h2 className='text-center'>Update Department</h2>
+            return <h2 className='text-center' style={{ margin: "20px" }}>Update Department</h2>
         } else {
-            return <h2 className='text-center'>Add Department</h2>
+            return <h2 className='text-center' style={{ margin: "20px" }}>Add Department</h2>
         }
     }
 
