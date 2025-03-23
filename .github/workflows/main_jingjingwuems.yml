@@ -55,5 +55,5 @@ jobs:
         with:
           app-name: 'JingjingWuems'
           slot-name: 'Production'
-          package: .
+          package: './ems-frontend/dist'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_0D577270DB2A4725A0D98048FEBCB6A1 }}
