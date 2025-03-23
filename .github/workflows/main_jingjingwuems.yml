@@ -25,7 +25,7 @@ jobs:
 
       - name: npm install, build, and test
         run: |
-          cd ems-frontend
+          cd fullstack/ems-frontend
           npm install
           npm run build --if-present
           npm run test --if-present
@@ -55,5 +55,5 @@ jobs:
         with:
           app-name: 'JingjingWuems'
           slot-name: 'Production'
-          package: './ems-frontend/dist'
+          package: 'full-stack/ems-frontend/dist'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_0D577270DB2A4725A0D98048FEBCB6A1 }}
