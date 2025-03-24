@@ -39,14 +39,21 @@ jobs:
 
     # - name: Logout from Docker
     #   run: docker logout ${{ secrets.ACR_URL }}
+    
+    # Set up Azure CLI
+    - name: Set up Azure CLI
+      uses: azure/setup-azurecli@v1
+      with:
+        azure-cliv2-version: latest
 
-    - name: Check Azure CLI login
+      # Log in to Azure with username and password
+    - name: Login to Azure
       run: |
-        az account show
-
+          az login --username ${{ secrets.AZURE_USERNAME }} --password ${{ secrets.AZURE_PASSWORD }}
+          
     - name: Deploy container to Azure Container Instance
       run: |
-       az account set --subscription "2ba31480-ee6e-422e-a54b-f6c74b504f47" --debug
+       # az account set --subscription "2ba31480-ee6e-422e-a54b-f6c74b504f47" --debug
        az container create \
          --resource-group ems-backend-rg \
          --name emsaci \
