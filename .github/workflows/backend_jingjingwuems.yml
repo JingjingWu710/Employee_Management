@@ -42,7 +42,7 @@ jobs:
     
     # Set up Azure CLI
     - name: Set up Azure CLI
-      uses: azure/setup-azurecli@v1
+      uses: azure/setup-azurecli@v2
       with:
         azure-cliv2-version: latest
 
