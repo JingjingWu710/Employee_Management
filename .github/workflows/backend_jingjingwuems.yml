@@ -54,6 +54,7 @@ jobs:
           --cpu 1 \
           --memory 1.0 \
           --restart-policy Always \
+          --registry-username ${{ secrets.AZURE_USERNAME }} \
           --registry-password ${{ secrets.AZURE_PASSWORD }} \
           --os-type Linux \
           --ports 80
