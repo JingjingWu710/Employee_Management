@@ -37,8 +37,8 @@ jobs:
     - name: Push Docker image to Azure Container Registry
       run: docker push ${{ secrets.ACR_URL }}/ems-backend:${{ github.sha }}
 
-    - name: Logout from Docker
-      run: docker logout ${{ secrets.ACR_URL }}
+    # - name: Logout from Docker
+    #   run: docker logout ${{ secrets.ACR_URL }}
 
     - name: Check Azure CLI login
       run: |
