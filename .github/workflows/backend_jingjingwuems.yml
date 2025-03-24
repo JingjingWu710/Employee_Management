@@ -40,15 +40,16 @@ jobs:
     - name: Logout from Docker
       run: docker logout ${{ secrets.ACR_URL }}
     
-    - name: Deploy Docker image to Azure Container Instance
+    - name: Deploy container to Azure Container Instance
       run: |
-        az container create \
-          --resource-group ems-backend-rg \
-          --name emsaci \
-          --image ${{ secrets.ACR_URL }}/ems-backend:${{ github.sha }} \
-          --cpu 1 \
-          --memory 1 \
-          --registry-username ${{ secrets.AZURE_USERNAME }} \
-          --registry-password ${{ secrets.AZURE_PASSWORD }} \
-          --os-type Linux \
-          --ports 80
+       az account set --subscription "2ba31480-ee6e-422e-a54b-f6c74b504f47"
+       az container create \
+         --resource-group ems-backend-rg \
+         --name emsaci \
+         --image ${{ secrets.ACR_URL }}/ems-backend:${{ github.sha }} \
+         --cpu 1 \
+         --memory 1.0 \
+         --restart-policy OnFailure
+         --registry-password ${{ secrets.AZURE_PASSWORD }} \
+         --os-type Linux \
+         --ports 80
