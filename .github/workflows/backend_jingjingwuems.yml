@@ -39,10 +39,14 @@ jobs:
 
     - name: Logout from Docker
       run: docker logout ${{ secrets.ACR_URL }}
-    
+
+    - name: Check Azure CLI login
+      run: |
+        az account show
+
     - name: Deploy container to Azure Container Instance
       run: |
-       az account set --subscription "2ba31480-ee6e-422e-a54b-f6c74b504f47"
+       az account set --subscription "2ba31480-ee6e-422e-a54b-f6c74b504f47" --debug
        az container create \
          --resource-group ems-backend-rg \
          --name emsaci \
