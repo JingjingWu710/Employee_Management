@@ -5,6 +5,10 @@ on:
     branches:
       - main
 
+permissions:
+  id-token: write  # Allow write access to id-token
+  contents: read   # Grant read access to repo contents
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -44,8 +48,8 @@ jobs:
       uses: azure/login@v2
       with:
           client-id: 9da63db1-12cd-4f3f-8763-74d6d9fa83e4
-          subscription-id: n0d8Q~bsu1feWBUWPlFrMsmW-xH0QgcT9tUTTa~0
           tenant-id: 35e9f023-8c53-4774-87e7-156bbe96651d
+          subscription-id: 2ba31480-ee6e-422e-a54b-f6c74b504f47
 
           
     - name: Deploy container to Azure Container Instance
