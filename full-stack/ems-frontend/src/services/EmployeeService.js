@@ -1,6 +1,6 @@
 import axios from "axios"
 
-const REST_API_BASE_URL = 'https://jingjingwuems.azurewebsites.net/api/employees';
+const REST_API_BASE_URL = 'https://ems-backend-fggffxcxf2fuhqce.uksouth-01.azurewebsites.net/api/employees';
 
 export const listEmployees = () => axios.get(REST_API_BASE_URL);
 
