@@ -42,7 +42,7 @@ const ListDepartmentComponent = () => {
             <table className='table table-bordered table-hover'>
                 <thead>
                     <tr>
-                        <th>Department Id</th>
+                        <th>Department ID</th>
                         <th>Department Name</th>
                         <th>Department Description</th>
                         <th>Actions</th>
