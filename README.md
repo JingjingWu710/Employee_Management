@@ -1,4 +1,4 @@
-# Employee Mangement System (Azure, CI/CD)
+# Employee Mangement System (Azure, CI/CD, React.js + Spring Boot)
 **This web app has been deployed on Azure and implemented CI/CD.**
 
 The frontend and backed are independently deployed with different Azure app service.
