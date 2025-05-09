@@ -1,5 +1,5 @@
 # Employee Mangement System (Azure, CI/CD, React.js + Spring Boot)
-**This web app has been deployed on Azure and implemented CI/CD. Sometimes it needs me to restart manually becuase I don't turn on the automatical restarting feature.**
+**This web app has been deployed on Azure and implemented CI/CD. Sometimes it needs me to restart manually becuase I don't turn on the automatic restarting feature.**
 
 The frontend and backed are independently deployed with different Azure app service.
 
